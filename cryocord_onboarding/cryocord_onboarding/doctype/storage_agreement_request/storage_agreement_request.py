@@ -12,3 +12,7 @@ class StorageAgreementRequest(Document):
         service.validate_workflow_transition()
         
         self.total_amount = sum(item.amount or 0 for item in self.requested_packages)
+        
+    def before_save(self):
+        service = StorageAgreementRequestService(self)
+        service.fill_sales()

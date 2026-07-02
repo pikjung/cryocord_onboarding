@@ -35,10 +35,16 @@ class StorageAgreementRequestService:
                     "The document creator is not allowed to approve this request."
                 )
             
-        self.update_approved_data(self)
+        self.update_approved_data()
             
     def update_approved_data(self):
         if self.doc.workflow_state == "Approved":
             self.doc.approved_by = frappe.session.user
             self.doc.approved_at = frappe.utils.now()
             
+        if self.doc.workflow_state == "Pending Approval":
+            self.doc.requested_date = frappe.utils.now()
+            
+    def fill_sales(self):
+        self.doc.sales_officer = frappe.session.user
+        
