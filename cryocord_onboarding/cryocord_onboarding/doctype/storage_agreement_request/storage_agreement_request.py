@@ -10,3 +10,5 @@ class StorageAgreementRequest(Document):
     def validate(self):
         service = StorageAgreementRequestService(self)
         service.validate_workflow_transition()
+        
+        self.total_amount = sum(item.amount or 0 for item in self.requested_packages)

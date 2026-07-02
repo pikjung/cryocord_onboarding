@@ -23,7 +23,11 @@
   "approved_at",
   "approval_reason",
   "section_break_kavz",
-  "requested_packages"
+  "requested_packages",
+  "section_break_duke",
+  "column_break_qoeg",
+  "column_break_scfy",
+  "total"
  ],
  "fields": [
   {
@@ -133,13 +137,31 @@
    "fieldtype": "Table",
    "label": "Requested Packages",
    "options": "Storage Agreement Item"
+  },
+  {
+   "fieldname": "section_break_duke",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qoeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_scfy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "precision": "2"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-02 13:30:06.637705",
+ "modified": "2026-07-02 16:28:33.678213",
  "modified_by": "Administrator",
  "module": "Cryocord Onboarding",
  "name": "Storage Agreement Request",

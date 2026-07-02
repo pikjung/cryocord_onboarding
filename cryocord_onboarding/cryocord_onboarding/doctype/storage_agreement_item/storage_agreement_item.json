@@ -43,14 +43,15 @@
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Amount"
+   "label": "Amount",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-07-02 13:30:25.663291",
+ "modified": "2026-07-02 16:41:24.496349",
  "modified_by": "Administrator",
  "module": "Cryocord Onboarding",
  "name": "Storage Agreement Item",
