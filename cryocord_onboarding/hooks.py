@@ -259,5 +259,11 @@ fixtures = [
         "filters": [
             ["role", "in", ["Sales Officer", "Operations Manager"]]
         ]
+    },
+    {
+        "dt": "Workflow",
+        "filters": [
+            ["name", "in", ["Storage Agreement Request Workflow"]]
+        ]
     }
 ]
