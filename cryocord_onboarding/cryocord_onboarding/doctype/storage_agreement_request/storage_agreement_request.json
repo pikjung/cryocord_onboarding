@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "autoname": "SAR-.YYYY.-.#####",
+ "creation": "2026-07-02 11:30:22.410650",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_9xhr",
+  "amended_from",
+  "section_break_fvan",
+  "customer",
+  "column_break_pnwq",
+  "lead",
+  "column_break_vmov",
+  "opportunity",
+  "section_break_luaz",
+  "request_column",
+  "sales_officer",
+  "requested_date",
+  "remarks",
+  "column_break_sbxy",
+  "approved_by",
+  "approved_at",
+  "approval_reason",
+  "section_break_kavz",
+  "requested_packages"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_9xhr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Storage Agreement Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_fvan",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pnwq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "column_break_vmov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Link",
+   "label": "Opportunity",
+   "options": "Opportunity"
+  },
+  {
+   "fieldname": "sales_officer",
+   "fieldtype": "Link",
+   "label": "Sales Officer",
+   "link_filters": "[[\"User\",\"role\",\"=\",\"Sales Officer\"]]",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_date",
+   "fieldtype": "Datetime",
+   "label": "Requested Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_luaz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_sbxy",
+   "fieldtype": "Column Break",
+   "label": "Approve"
+  },
+  {
+   "fieldname": "approval_reason",
+   "fieldtype": "Small Text",
+   "label": "Approval Reason"
+  },
+  {
+   "fieldname": "request_column",
+   "fieldtype": "Column Break",
+   "label": "Request"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "link_filters": "[[\"User\",\"role\",\"=\",\"Operations Manager\"]]",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_at",
+   "fieldtype": "Datetime",
+   "label": "Approved at",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kavz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requested_packages",
+   "fieldtype": "Table",
+   "label": "Requested Packages",
+   "options": "Storage Agreement Item"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-07-02 13:30:06.637705",
+ "modified_by": "Administrator",
+ "module": "Cryocord Onboarding",
+ "name": "Storage Agreement Request",
+ "naming_rule": "Expression",
+ "owner": "fikridev31@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
