@@ -1,8 +1,11 @@
 import frappe
 
+from cryocord_onboarding.crm.repository.storage_request_audit import StorageRequestAuditRepository
+
 class StorageAgreementRequestService:
     def __init__(self, storage_agreement_request):
         self.doc = storage_agreement_request
+        self.audit_repository = StorageRequestAuditRepository()
 
     def validate_workflow_transition(self):
         old_doc = self.doc.get_doc_before_save()
@@ -35,9 +38,13 @@ class StorageAgreementRequestService:
                     "The document creator is not allowed to approve this request."
                 )
             
-        self.update_approved_data()
+        self.update_workflow_data()
+        self.audit_repository.log_storage_request(
+            self.doc.name, current_status, new_status
+        )
+        
             
-    def update_approved_data(self):
+    def update_workflow_data(self):
         if self.doc.workflow_state == "Approved":
             self.doc.approved_by = frappe.session.user
             self.doc.approved_at = frappe.utils.now()
