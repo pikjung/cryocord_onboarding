@@ -265,5 +265,11 @@ fixtures = [
         "filters": [
             ["name", "in", ["Storage Agreement Request Workflow"]]
         ]
+    },
+    {
+        "dt": "User",
+        "filters": [
+            ["name", "in", ["fikrisales@test.com", "fikrioperations@test.com"]]
+        ]
     }
 ]
