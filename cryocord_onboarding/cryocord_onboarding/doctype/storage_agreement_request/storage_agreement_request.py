@@ -16,3 +16,6 @@ class StorageAgreementRequest(Document):
     def before_save(self):
         service = StorageAgreementRequestService(self)
         service.fill_sales()
+        
+    def on_update_after_submit(self):
+        StorageAgreementRequestService(self).log_audit()

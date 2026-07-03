@@ -9,7 +9,7 @@
   "from_state",
   "to_state",
   "changed_by",
-  "change_at",
+  "changed_at",
   "reason"
  ],
  "fields": [
@@ -36,20 +36,20 @@
    "options": "User"
   },
   {
-   "fieldname": "change_at",
-   "fieldtype": "Datetime",
-   "label": "Change At"
-  },
-  {
    "fieldname": "reason",
    "fieldtype": "Small Text",
    "label": "Reason"
+  },
+  {
+   "fieldname": "changed_at",
+   "fieldtype": "Datetime",
+   "label": "Changed At"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-02 13:37:02.775453",
+ "modified": "2026-07-03 10:02:04.078256",
  "modified_by": "Administrator",
  "module": "Cryocord Onboarding",
  "name": "Storage Request Audit",

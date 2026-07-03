@@ -10,7 +10,11 @@ class StorageAgreementRequestService:
     def validate_workflow_transition(self):
         old_doc = self.doc.get_doc_before_save()
 
-        current_status = old_doc.workflow_state if old_doc else "Draft"
+        self.doc._old_workflow_state = (
+            old_doc.workflow_state if old_doc else "Draft"
+        )
+
+        current_status = self.doc._old_workflow_state
         new_status = self.doc.workflow_state
 
         if current_status == new_status:
@@ -39,9 +43,7 @@ class StorageAgreementRequestService:
                 )
             
         self.update_workflow_data()
-        self.audit_repository.log_storage_request(
-            self.doc.name, current_status, new_status
-        )
+        self.log_audit()
         
             
     def update_workflow_data(self):
@@ -54,4 +56,18 @@ class StorageAgreementRequestService:
             
     def fill_sales(self):
         self.doc.sales_officer = frappe.session.user
+        
+    def log_audit(self):
+        doc_before_save = self.doc.get_doc_before_save()
+        from_state = doc_before_save.workflow_state if doc_before_save else None
+        to_state = self.doc.workflow_state
+
+        if from_state == to_state:
+            return
+
+        self.audit_repository.log_storage_request(
+            self.doc.name,
+            from_state,
+            to_state,
+        )
         
