@@ -174,9 +174,9 @@ required_apps = ["erpnext"]
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "cryocord_onboarding.event.get_events"
-# }
+override_whitelisted_methods = {
+	"get_pending_approval_requests": "cryocord_onboarding.crm.controller.api.api.get_pending_approval_requests"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

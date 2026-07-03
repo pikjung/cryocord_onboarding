@@ -1,6 +1,7 @@
 import frappe
 
 from cryocord_onboarding.crm.repository.storage_request_audit import StorageRequestAuditRepository
+from cryocord_onboarding.crm.repository.storage_agreement_request import StorageAgreementRequestRepository
 
 class StorageAgreementRequestService:
     def __init__(self, storage_agreement_request):
@@ -71,3 +72,7 @@ class StorageAgreementRequestService:
             to_state,
         )
         
+    @staticmethod
+    def get_pending_approval_requests():
+        repository = StorageAgreementRequestRepository()
+        return repository.get_pending_approval_requests()
