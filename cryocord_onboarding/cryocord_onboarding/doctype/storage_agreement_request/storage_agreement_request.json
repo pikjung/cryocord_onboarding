@@ -21,7 +21,6 @@
   "column_break_sbxy",
   "approved_by",
   "approved_at",
-  "approval_reason",
   "section_break_kavz",
   "requested_packages",
   "section_break_duke",
@@ -105,11 +104,6 @@
    "label": "Approve"
   },
   {
-   "fieldname": "approval_reason",
-   "fieldtype": "Small Text",
-   "label": "Approval Reason"
-  },
-  {
    "fieldname": "request_column",
    "fieldtype": "Column Break",
    "label": "Request"
@@ -161,7 +155,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-02 16:28:33.678213",
+ "modified": "2026-07-03 14:29:16.503332",
  "modified_by": "Administrator",
  "module": "Cryocord Onboarding",
  "name": "Storage Agreement Request",

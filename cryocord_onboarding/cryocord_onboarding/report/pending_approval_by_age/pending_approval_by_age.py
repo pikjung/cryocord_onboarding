@@ -24,6 +24,13 @@ def get_columns():
 			"options": "Storage Agreement Request",
 			"width": 220,
 		},
+  		{
+			"label": _("Customer"),
+			"fieldname": "customer",
+			"fieldtype": "Link",
+			"options": "Customer",
+			"width": 220,
+		},
 		{
 			"label": _("Sales Officer"),
 			"fieldname": "sales_officer",
@@ -74,6 +81,7 @@ def get_data(filters):
 			sales_officer,
 			requested_date,
 			workflow_state,
+			customer,
 			creation
 		FROM `tabStorage Agreement Request`
 		WHERE docstatus = 0
@@ -110,6 +118,9 @@ def get_conditions(filters):
 
 	if filters.get("to_date"):
 		conditions += " AND creation <= %(to_date)s"
+  
+	if filters.get("customer"):
+		conditions += " AND customer = %(customer)s"
 
 	return conditions
 

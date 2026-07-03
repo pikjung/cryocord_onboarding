@@ -19,3 +19,5 @@ class StorageAgreementRequest(Document):
         
     def on_update_after_submit(self):
         StorageAgreementRequestService(self).log_audit()
+        
+    

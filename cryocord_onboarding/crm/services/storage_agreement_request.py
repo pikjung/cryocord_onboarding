@@ -1,4 +1,5 @@
 import frappe
+from frappe import _
 
 from cryocord_onboarding.crm.repository.storage_request_audit import StorageRequestAuditRepository
 from cryocord_onboarding.crm.repository.storage_agreement_request import StorageAgreementRequestRepository
@@ -35,9 +36,6 @@ class StorageAgreementRequestService:
             )
 
         if new_status == "Approved":
-            if not self.doc.approval_reason:
-                frappe.throw("Approval reason is required when approving the request.")
-            
             if self.doc.owner == frappe.session.user:
                 frappe.throw(
                     "The document creator is not allowed to approve this request."

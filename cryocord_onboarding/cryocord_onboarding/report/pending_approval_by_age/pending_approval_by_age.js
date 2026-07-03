@@ -4,6 +4,13 @@
 frappe.query_reports["Pending Approval by Age"] = {
 	"filters": [
 		{
+			"fieldname": "customer",
+			"label": __("Customer"),
+			"fieldtype": "Link",
+			"options": "Customer",
+			"width": "100",
+		},
+		{
 			"fieldname": "sales_officer",
 			"label": __("Sales Officer"),
 			"fieldtype": "Link",

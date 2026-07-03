@@ -16,22 +16,26 @@
   {
    "fieldname": "request",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Request",
    "options": "Storage Agreement Request"
   },
   {
    "fieldname": "from_state",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "From State"
   },
   {
    "fieldname": "to_state",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "To State"
   },
   {
    "fieldname": "changed_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Changed By",
    "options": "User"
   },
@@ -43,13 +47,14 @@
   {
    "fieldname": "changed_at",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
    "label": "Changed At"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-03 10:02:04.078256",
+ "modified": "2026-07-03 13:47:57.371848",
  "modified_by": "Administrator",
  "module": "Cryocord Onboarding",
  "name": "Storage Request Audit",

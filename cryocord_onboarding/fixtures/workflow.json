@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Storage Agreement Request",
   "is_active": 1,
-  "modified": "2026-07-02 13:57:24.857826",
+  "modified": "2026-07-03 10:30:55.884713",
   "name": "Storage Agreement Request Workflow",
   "override_status": 0,
   "send_email_alert": 0,
@@ -76,7 +76,7 @@
    {
     "allow_edit": "Operations Manager",
     "avoid_status_override": 0,
-    "doc_status": "2",
+    "doc_status": "1",
     "is_optional_state": 0,
     "message": null,
     "next_action_email_template": null,
@@ -143,7 +143,7 @@
     "parentfield": "transitions",
     "parenttype": "Workflow",
     "send_email_to_creator": 0,
-    "state": "Approved",
+    "state": "Pending Approval",
     "workflow_builder_id": null
    },
    {
